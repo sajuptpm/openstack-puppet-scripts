@@ -2,7 +2,7 @@
 
 ####Heat
 class { '::heat':
-    keystone_host => "192.168.0.131",
+    keystone_host => "192.168.56.103",
     keystone_port => "35357",
     keystone_user => "heat",
     keystone_tenant => "services",
@@ -12,8 +12,9 @@ class { '::heat':
   }
 
 ####Heat Engine
+#auth_encryption_key should be 32 char long
 class { 'heat::engine':
-        auth_encryption_key => "mykey123",
+        auth_encryption_key => "12345678912345678912345678912345",
 }
 
 ####Heat API
