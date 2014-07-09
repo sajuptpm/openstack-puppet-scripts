@@ -6,5 +6,12 @@ Create Stack
 #heat stack-create mystack2 -f hello_world.yaml -P "KeyName=kp1" -P "ImageId=525910b2-5a42-4f59-a6c5-362f3b977e44"
 Notes:
 * Add rules (ICMP,SSH,--) to "Default" security group to Ping or SSH to the instance
+* List Keypair, "#nova keypair-list"
+* Create Keypair and download Private key, Public key will automatically pushed to VM by OpenStack, "#nova keypair-add kp1 > mykey.txt"
+* Find images, "#nova image-list"
+* Find VMs, "#nova list"
+* SSH to VM with Private key you downloaded, "#ssh -i mykey.txt cirros@10.0.0.4", password is cubswin:) 
+
+
 
 
