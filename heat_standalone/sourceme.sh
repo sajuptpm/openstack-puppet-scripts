@@ -2,13 +2,18 @@
 ##source this script and run the command like "#heat stack-list"
 
 
-HEATCLIENT_DEBUG=1
+HEATCLIENT_DEBUG=0
 
-OS_USERNAME=admin
+#Don't use admin user and admin tenant
+OS_USERNAME=demo
 OS_PASSWORD=nova
+#Endpoint of keystone
 OS_AUTH_URL=http://192.168.56.103:35357/v2.0
-OS_TENANT_NAME=admin
-OS_TENANT_ID=a5afdc307efb41b3aa4b91d407b5b39c
+#Don't use admin tenant
+OS_TENANT_NAME=demo
+#run "#keystone tenant-list" and find the IP of tenant
+OS_TENANT_ID=a45e1c5b562942a5a3af8cf302ae2b47
+#Endpoint of heat-api
 HEAT_URL=http://127.0.0.1:8004/v1/$OS_TENANT_ID
 OS_NO_CLIENT_AUTH=1
 
