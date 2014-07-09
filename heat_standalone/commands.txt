@@ -1,4 +1,6 @@
 
+First run "#source sourceme.sh"
+
 1)
 Create Stack
 #heat stack-create mystack2 -f hello_world.yaml -P "KeyName=kp1" -P "ImageId=525910b2-5a42-4f59-a6c5-362f3b977e44"
